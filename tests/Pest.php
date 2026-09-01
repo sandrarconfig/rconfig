@@ -20,7 +20,13 @@ use Tests\UnitTestCase;
 //     ->in('Feature');
 
 pest()->extend(UnitTestCase::class)
-    ->in('Unit');
+    ->in('Unit/Connections');
+
+pest()->extend(TestCase::class)
+    ->in('Unit/Console/Commands/DataImport');
+
+pest()->extend(UnitTestCase::class)
+    ->in('Unit/Console/Commands/BasicCommandsTest.php');
 
 /*
 |--------------------------------------------------------------------------
